@@ -1,4 +1,4 @@
-baseURL = 'https://dannysunyu.github.io/myblog-site'
+baseURL = 'https://danielsunyu.github.io/'
 languageCode = 'zh'
 title = "S先生の筆記📒"
 theme = 'maverick'
