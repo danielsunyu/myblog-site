@@ -10,5 +10,5 @@ draft = false
 !sudo apt-get install texlive-xetex texlive-fonts-recommended texlive-plain-generic
 !sudo apt-get install pandoc
 
-!jupyter nbconvert --to pdf <path to jupyter notebook>.ipynb
+!jupyter nbconvert --to pdf <path to jupyter notebook>.ipynb 
 ```
