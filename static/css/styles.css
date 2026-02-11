@@ -6,3 +6,26 @@ body {
     padding-top: 200px;
     width: 100%;
 }
+
+/* Code styling */
+code {
+    background: #eee;
+}
+
+.highlight {
+    background: #f3f3f3 !important;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.highlight > pre {
+    background: #f3f3f3 !important;
+    padding: 0.5rem;
+    border-radius: 4px;
+}
+
+:not(pre) > code {
+    padding: 0.2rem 0.4rem;
+    font-size: 0.8em;
+    border-radius: 4px;
+}
