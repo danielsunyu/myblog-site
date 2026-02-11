@@ -122,8 +122,21 @@ code {
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    border-bottom: 2px solid #f0f0f0;
     padding-bottom: 0.5rem;
+    padding-left: 0.8rem;
+    border-left: 4px solid;
+}
+
+.hero-section:nth-child(2) h3 {
+    border-left-color: #3b82f6;
+}
+
+.hero-section:nth-child(3) h3 {
+    border-left-color: #10b981;
+}
+
+.hero-section:nth-child(4) h3 {
+    border-left-color: #f59e0b;
 }
 
 /* Education */
@@ -168,6 +181,12 @@ code {
     white-space: nowrap;
 }
 
+.item-location {
+    color: #888;
+    font-size: 0.9rem;
+    margin-bottom: 0.3rem;
+}
+
 .item-role {
     color: #666;
     font-size: 0.95rem;
@@ -191,7 +210,23 @@ code {
     background: #f9f9f9;
     padding: 1rem 1.2rem;
     border-radius: 6px;
-    border: 1px solid #f0f0f0;
+    border-left: 4px solid #ccc;
+}
+
+.skills-grid > :nth-child(1) {
+    border-left-color: #3b82f6;
+}
+
+.skills-grid > :nth-child(2) {
+    border-left-color: #8b5cf6;
+}
+
+.skills-grid > :nth-child(3) {
+    border-left-color: #10b981;
+}
+
+.skills-grid > :nth-child(4) {
+    border-left-color: #f59e0b;
 }
 
 .skill-label {
@@ -400,6 +435,7 @@ html.dark-mode .item-title {
 
 html.dark-mode .item-subtitle,
 html.dark-mode .item-meta,
+html.dark-mode .item-location,
 html.dark-mode .item-role,
 html.dark-mode .item-tags {
     color: #aaa !important;
