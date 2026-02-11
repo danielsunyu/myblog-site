@@ -17,8 +17,8 @@ custom_css = ["css/styles.css"]
 math = true
 
 [params.comments]
-githubRepo = 'dannysunyu/myblog-site'
-theme = 'github-light'
+enabled = true
+disqusShortname = 'https-danielsunyu-github-io-myblog-site'
 
 [menu]
 [[menu.main]]
