@@ -1,5 +1,64 @@
 body {
     font: 1.3rem/1.5 -apple-system,BlinkMacSystemFont,avenir next,avenir,helvetica,helvetica neue,ubuntu,roboto,noto,segoe ui,arial,sans-serif;
+    padding: 0 2rem !important;
+}
+
+header.header-container {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    gap: 2rem !important;
+    line-height: 1 !important;
+    padding: 0.4rem 0 0.4rem 0 !important;
+    margin-bottom: 0 !important;
+    flex-wrap: nowrap !important;
+}
+
+header {
+    padding-bottom: 0.3rem !important;
+    line-height: 1 !important;
+}
+
+.header-left {
+    flex-shrink: 0;
+    display: inline-block;
+}
+
+.header-right {
+    display: flex !important;
+    align-items: center !important;
+    gap: 2rem !important;
+    flex-wrap: nowrap !important;
+}
+
+.header-nav {
+    display: flex !important;
+    gap: 1.5rem !important;
+    align-items: center !important;
+    vertical-align: middle !important;
+    flex-wrap: nowrap !important;
+}
+
+.header-nav .nav-link {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+    white-space: nowrap;
+    margin: 0 !important;
+    padding: 0.5rem 0 !important;
+    line-height: 1.4 !important;
+    vertical-align: middle !important;
+}
+
+.header-nav .nav-link.active {
+    text-decoration: underline;
+}
+
+.header-icons {
+    display: flex !important;
+    align-items: center !important;
+    gap: 0 !important;
+    flex-wrap: nowrap !important;
 }
 
 #clustrmap-container {
@@ -28,4 +87,215 @@ code {
     padding: 0.2rem 0.4rem;
     font-size: 0.8em;
     border-radius: 4px;
+}
+
+/* Homepage styles */
+.hero {
+    margin: 3rem 0 4rem 0;
+}
+
+.hero h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.hero h3 {
+    font-size: 1.3rem;
+    color: #555;
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+}
+
+.latest-posts {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid #eee;
+}
+
+.latest-posts h2 {
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.posts-list {
+    list-style: none;
+    padding: 0;
+}
+
+.posts-list li {
+    margin-bottom: 1.2rem;
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+}
+
+.posts-list time {
+    flex-shrink: 0;
+    color: #999;
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+}
+
+.posts-list a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.posts-list a:hover {
+    text-decoration: underline;
+}
+
+/* Social icons in header */
+.social-icon {
+    width: 0.95em;
+    height: 0.95em;
+    display: inline-block;
+    vertical-align: -0.12em;
+}
+
+.social-link {
+    display: inline;
+    opacity: 0.6;
+    transition: opacity 0.2s;
+    margin-left: 0.5rem;
+}
+
+.social-link:hover {
+    opacity: 1;
+}
+
+.dark-mode-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: inline;
+    opacity: 0.6;
+    transition: opacity 0.2s;
+    margin-left: 1.5rem;
+    font-size: inherit;
+}
+
+.dark-mode-toggle:hover {
+    opacity: 1;
+}
+
+/* Dark mode styles */
+html.dark-mode {
+    color-scheme: dark;
+    background: #252526 !important;
+}
+
+html.dark-mode body {
+    background: #252526 !important;
+    color: #e4e4e4 !important;
+}
+
+html.dark-mode main, html.dark-mode .content {
+    background: #252526 !important;
+    color: #e4e4e4 !important;
+}
+
+html.dark-mode header {
+    background: #1a1a1a !important;
+}
+
+html.dark-mode header a, html.dark-mode header a:visited {
+    color: #e4e4e4 !important;
+}
+
+html.dark-mode blockquote {
+    border-left-color: #444 !important;
+    color: #b8b8b8 !important;
+}
+
+html.dark-mode code, html.dark-mode pre {
+    background: #2a2a2a !important;
+    color: #e4e4e4 !important;
+}
+
+html.dark-mode :not(pre) > code {
+    background: #2a2a2a !important;
+    color: #e4e4e4 !important;
+}
+
+html.dark-mode .highlight {
+    background: #1e1e1e !important;
+}
+
+html.dark-mode .highlight > pre {
+    background: #1e1e1e !important;
+    color: #e4e4e4 !important;
+}
+
+html.dark-mode .highlight code {
+    background: transparent !important;
+}
+
+/* Code block font size */
+.highlight {
+    font-size: 1.05rem;
+}
+
+.highlight code {
+    font-size: 1.05rem;
+}
+
+html.dark-mode .meta {
+    color: #888 !important;
+}
+
+html.dark-mode .hr-list, html.dark-mode hr {
+    border-bottom-color: #333 !important;
+}
+
+html.dark-mode a, html.dark-mode a:visited {
+    color: #88d4ff !important;
+}
+
+html.dark-mode a:hover, html.dark-mode a.heading-link {
+    color: #5dc7ff !important;
+}
+
+html.dark-mode .posts-list time {
+    color: #888 !important;
+}
+
+html.dark-mode .index-date {
+    color: #666 !important;
+}
+
+html.dark-mode table {
+    border-color: #444 !important;
+}
+
+html.dark-mode th, html.dark-mode td {
+    border-color: #444 !important;
+}
+
+html.dark-mode th {
+    background-color: #2a2a2a !important;
+    color: #e4e4e4 !important;
+}
+
+html.dark-mode section {
+    color: #e4e4e4 !important;
+}
+
+/* Disqus comments styling */
+#disqus_thread {
+    font-size: 0.75rem;
+}
+
+#disqus_thread iframe {
+    max-width: 100%;
+}
+
+/* Hide Disqus emoji picker */
+.emoji-picker,
+.emoji-button,
+[class*="emoji"],
+[id*="emoji"] {
+    display: none !important;
 }

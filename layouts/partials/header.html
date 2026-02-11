@@ -1,20 +1,79 @@
-<header>
+<header class="header-container" style="padding-bottom: 0.3rem; line-height: 1;">
   {{ range .Site.Params.custom_css -}}
   <link rel="stylesheet" href="{{ . | absURL }}">
   {{- end }}
-  <p style="padding: 0;margin: 0;">
-    <a href="/">
-      <b>{{ .Site.Title }}</b>
-      <span class="text-stone-500 animate-blink">▮</span>
-    </a>
-  </p>
-  <ul style="padding: 0;margin: 0;">
-    {{ $currentPage := . }}
-    {{ range .Site.Menus.main }}
-    <li class="{{ if $currentPage.HasMenuCurrent "main" . }}active{{ end }}">
-    <a href="{{ .URL }}"><span>{{ .Name }}</span></a>
-    {{ end }}
-    </li>
-  </ul>
+  <div class="header-left">
+    <p style="padding: 0;margin: 0;">
+      <a href="{{ .Site.BaseURL }}">
+        <b>{{ .Site.Title }}</b>
+        <span class="text-stone-500 animate-blink">▮</span>
+      </a>
+    </p>
+  </div>
+  <div class="header-right">
+    <nav class="header-nav">
+      {{ $currentPage := . }}
+      {{ range .Site.Menus.main }}
+      <a href="{{ .URL }}" class="nav-link {{ if $currentPage.HasMenuCurrent "main" . }}active{{ end }}">{{ .Name }}</a>
+      {{ end }}
+    </nav>
+    <div class="header-icons">
+      <a href="https://github.com/danielsunyu" class="social-link" title="GitHub" target="_blank" rel="noopener noreferrer">
+        <svg class="social-icon" viewBox="0 0 16 16" fill="currentColor">
+          <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+        </svg>
+      </a>
+      <a href="https://stackoverflow.com/users/2990350/dys" class="social-link" title="Stack Overflow" target="_blank" rel="noopener noreferrer">
+        <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M18.986 21.865v-6.404h2.134V24H1.844v-8.539h2.134v6.404h15.008zM6.111 19.731H16.85v-2.137H6.111v2.137zm.259-4.852l10.48 2.189.451-2.07-10.48-2.188-.451 2.07zm1.414-5.093L17.286 10.5l.903-1.986-11.85-5.379-.902 1.986zM19.34 5.001L9.239.563 8.161 2.626l10.099 4.438 1.18-2.063z"/>
+        </svg>
+      </a>
+      <a href="https://www.linkedin.com/in/danielsunyu/" class="social-link" title="LinkedIn" target="_blank" rel="noopener noreferrer">
+        <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/>
+        </svg>
+      </a>
+      <button id="dark-mode-toggle" class="dark-mode-toggle" title="Toggle dark mode" aria-label="Toggle dark mode">
+        <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+    </div>
+  </div>
 </header>
+
+<script>
+(function() {
+  const toggle = document.getElementById('dark-mode-toggle');
+  const html = document.documentElement;
+  
+  // Check for saved preference or system preference
+  function isDarkMode() {
+    const saved = localStorage.getItem('darkMode');
+    if (saved !== null) {
+      return saved === 'true';
+    }
+    return window.matchMedia('(prefers-color-scheme: dark)').matches;
+  }
+  
+  // Apply dark mode
+  function applyDarkMode(isDark) {
+    if (isDark) {
+      html.classList.add('dark-mode');
+    } else {
+      html.classList.remove('dark-mode');
+    }
+    localStorage.setItem('darkMode', isDark);
+  }
+  
+  // Initialize
+  applyDarkMode(isDarkMode());
+  
+  // Toggle on click
+  toggle.addEventListener('click', function() {
+    const isDark = html.classList.contains('dark-mode');
+    applyDarkMode(!isDark);
+  });
+})();
+</script>
 <hr class="hr-list" style="padding: 0;margin: 0;">
