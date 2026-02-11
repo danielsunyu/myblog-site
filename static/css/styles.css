@@ -94,17 +94,118 @@ code {
     margin: 3rem 0 4rem 0;
 }
 
+.hero-intro {
+    margin-bottom: 3rem;
+}
+
 .hero h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    font-weight: 600;
+    font-size: 2.2rem;
+    margin-bottom: 0.8rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.intro-text {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+.hero-section {
+    margin-bottom: 2.5rem;
 }
 
 .hero h3 {
-    font-size: 1.3rem;
-    color: #555;
-    margin-bottom: 1.5rem;
-    font-weight: 400;
+    font-size: 1.2rem;
+    color: #000;
+    margin-bottom: 1.2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 0.5rem;
+}
+
+/* Education */
+.education-item {
+    margin-bottom: 1rem;
+}
+
+.item-title {
+    font-weight: 600;
+    color: #000;
+    font-size: 1rem;
+}
+
+.item-subtitle {
+    color: #888;
+    font-size: 0.9rem;
+    margin-top: 0.3rem;
+}
+
+/* Experience */
+.experience-item {
+    margin-bottom: 1.8rem;
+    padding-left: 1rem;
+    border-left: 3px solid #e8e4da;
+}
+
+.item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0.3rem;
+    gap: 1rem;
+}
+
+.item-header .item-title {
+    font-size: 1.05rem;
+}
+
+.item-meta {
+    color: #999;
+    font-size: 0.85rem;
+    white-space: nowrap;
+}
+
+.item-role {
+    color: #666;
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+}
+
+.item-tags {
+    color: #888;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* Skills */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.skill-group {
+    background: #f9f9f9;
+    padding: 1rem 1.2rem;
+    border-radius: 6px;
+    border: 1px solid #f0f0f0;
+}
+
+.skill-label {
+    font-weight: 600;
+    color: #000;
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.skill-items {
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.6;
 }
 
 .latest-posts {
@@ -281,6 +382,44 @@ html.dark-mode th {
 
 html.dark-mode section {
     color: #e4e4e4 !important;
+}
+
+/* Dark mode - Homepage */
+html.dark-mode .intro-text {
+    color: #aaa !important;
+}
+
+html.dark-mode .hero h3 {
+    color: #e4e4e4 !important;
+    border-bottom-color: #333 !important;
+}
+
+html.dark-mode .item-title {
+    color: #e4e4e4 !important;
+}
+
+html.dark-mode .item-subtitle,
+html.dark-mode .item-meta,
+html.dark-mode .item-role,
+html.dark-mode .item-tags {
+    color: #aaa !important;
+}
+
+html.dark-mode .experience-item {
+    border-left-color: #444 !important;
+}
+
+html.dark-mode .skill-group {
+    background: #2a2a2a !important;
+    border-color: #3a3a3a !important;
+}
+
+html.dark-mode .skill-label {
+    color: #e4e4e4 !important;
+}
+
+html.dark-mode .skill-items {
+    color: #aaa !important;
 }
 
 /* Disqus comments styling */
