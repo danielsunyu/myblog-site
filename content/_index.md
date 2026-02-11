@@ -33,7 +33,4 @@ Huazhong University of Science and Technology
 **Infrastructure:** AWS, Kubernetes, Kafka, PostgreSQL  
 **Other:** Machine Learning, Deep Learning, Distributed Systems
 
-### Resources
 
-- [📄 Resume](/files/Modular_Resume.pdf)
-- [📝 Blog](/posts/)
