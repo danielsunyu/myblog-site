@@ -8,61 +8,75 @@
         {{ partial "header.html" . }}
         <section class="hero">
           <div class="hero-intro">
-            <p class="intro-text">Hi, I'm Daniel Sun 👋 — a Senior Full-Stack Engineer with expertise in distributed systems, microservices, and ML.</p>
+            <h2 class="intro-name">Daniel Sun</h2>
+            <p class="intro-text">Senior Full-Stack Engineer building scalable systems with expertise in distributed systems, microservices architecture, and machine learning. I'm passionate about clean code, thoughtful design, and solving complex technical problems across the full stack.</p>
           </div>
           
-          <div class="hero-section">
-            <h3>Education</h3>
-            <div class="education-item">
-              <div class="item-header">
-                <span class="item-title">University of Utah</span>
-                <span class="item-meta">Jan 2025 - May 2026</span>
+          <div class="content-sections">
+            <div class="hero-section">
+              <h3>Education</h3>
+              <div class="items-container">
+                <div class="item-card education-item">
+                  <div class="item-header">
+                    <span class="item-title">University of Utah</span>
+                    <span class="item-location">🇺🇸 Salt Lake City, USA</span>
+                    <span class="item-meta">Jan 2025 - May 2026</span>
+                  </div>
+                  <div class="item-role">Master of Science in Computing - AI Track</div>
+                </div>
+                <div class="item-card education-item">
+                  <div class="item-header">
+                    <span class="item-title">Huazhong University of Science and Technology</span>
+                    <span class="item-location">🇨🇳 Wuhan, China</span>
+                  </div>
+                  <div class="item-role">Bachelor of Engineering in Software Engineering</div>
+                </div>
               </div>
-              <div class="item-location">🌎 USA</div>
-              <div class="item-role">Master of Science in Computing - AI Track</div>
             </div>
-          </div>
-          
-          <div class="hero-section">
-            <h3>Experience</h3>
-            <div class="experience-item">
-              <div class="item-header">
-                <span class="item-title">Flo Energy</span>
-                <span class="item-meta">Apr 2024 - Dec 2024</span>
+            
+            <div class="hero-section">
+              <h3>Experience</h3>
+              <div class="items-container">
+                <div class="item-card experience-item">
+                  <div class="item-header">
+                    <span class="item-title">Flo Energy</span>
+                    <span class="item-location">🇸🇬 Singapore</span>
+                    <span class="item-meta">Apr 2024 - Dec 2024</span>
+                  </div>
+                  <div class="item-role">Senior Backend Engineer</div>
+                  <div class="item-tags">Camunda • Microservices • Kotlin • TypeScript • Spring Boot • AWS • Kubernetes</div>
+                </div>
+                <div class="item-card experience-item">
+                  <div class="item-header">
+                    <span class="item-title">Grab</span>
+                    <span class="item-location">🇸🇬 Singapore</span>
+                    <span class="item-meta">Dec 2018 - Aug 2023</span>
+                  </div>
+                  <div class="item-role">Senior Full-Stack Engineer</div>
+                  <div class="item-tags">JavaScript • Kotlin • Go • Dart • Flutter</div>
+                </div>
               </div>
-              <div class="item-location">🌏 Singapore</div>
-              <div class="item-role">Senior Backend Engineer</div>
-              <div class="item-tags">Camunda • Microservices • Kotlin • TypeScript • Spring Boot • AWS • Kubernetes</div>
             </div>
-            <div class="experience-item">
-              <div class="item-header">
-                <span class="item-title">Grab</span>
-                <span class="item-meta">Dec 2018 - Aug 2023</span>
-              </div>
-              <div class="item-location">🌏 Singapore</div>
-              <div class="item-role">Senior Full-Stack Engineer</div>
-              <div class="item-tags">JavaScript • Kotlin • Go • Dart • Flutter</div>
-            </div>
-          </div>
-          
-          <div class="hero-section">
-            <h3>Skills</h3>
-            <div class="skills-grid">
-              <div class="skill-group">
-                <div class="skill-label">Backend</div>
-                <div class="skill-items">Kotlin, TypeScript, Java, Go, Spring Boot, GraphQL</div>
-              </div>
-              <div class="skill-group">
-                <div class="skill-label">Frontend</div>
-                <div class="skill-items">JavaScript, Dart, Flutter</div>
-              </div>
-              <div class="skill-group">
-                <div class="skill-label">Infrastructure</div>
-                <div class="skill-items">AWS, Kubernetes, Kafka, PostgreSQL</div>
-              </div>
-              <div class="skill-group">
-                <div class="skill-label">Other</div>
-                <div class="skill-items">ML, Deep Learning, Distributed Systems</div>
+            
+            <div class="hero-section">
+              <h3>Skills</h3>
+              <div class="skills-grid">
+                <div class="skill-group">
+                  <div class="skill-label">Backend</div>
+                  <div class="skill-items">Kotlin, TypeScript, Java, Go, Spring Boot, GraphQL</div>
+                </div>
+                <div class="skill-group">
+                  <div class="skill-label">Frontend</div>
+                  <div class="skill-items">JavaScript, Dart, Flutter</div>
+                </div>
+                <div class="skill-group">
+                  <div class="skill-label">Infrastructure</div>
+                  <div class="skill-items">AWS, Kubernetes, Kafka, PostgreSQL</div>
+                </div>
+                <div class="skill-group">
+                  <div class="skill-label">Other</div>
+                  <div class="skill-items">ML, Deep Learning, Distributed Systems</div>
+                </div>
               </div>
             </div>
           </div>
@@ -85,5 +99,6 @@
         <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=222&t=n&d=yu1BCrXIaVGmxEQICfWKHiREO7LqhQYMwkHOmgd6gLo'></script>
       </div>
     </main>
+    {{ partial "footer.html" . }}
   </body>
 </html>
