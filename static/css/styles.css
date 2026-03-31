@@ -79,8 +79,22 @@ code {
 
 .highlight > pre {
     background: #f3f3f3 !important;
-    padding: 0.5rem;
+    padding: 0.12rem 0.55rem !important;
+    margin: 0;
+    line-height: 1.2 !important;
     border-radius: 4px;
+}
+
+.highlight > pre code {
+    line-height: 1.2 !important;
+}
+
+.highlight > pre code > span {
+    display: block !important;
+}
+
+.highlight > pre code > span > span {
+    display: inline !important;
 }
 
 :not(pre) > code {
@@ -809,4 +823,40 @@ html.dark-mode .mobile-menu-toggle span {
     html.dark-mode .hero-intro {
         padding: 1.5rem !important;
     }
+}
+
+/* Final override: compact Hugo/Chroma code blocks */
+.highlight {
+    margin: 1.2rem 0 !important;
+}
+
+.highlight > pre,
+.highlight > pre[tabindex="0"] {
+    margin: 0 !important;
+}
+
+.highlight > pre,
+.highlight > pre[tabindex="0"] {
+    padding-top: 0.08rem !important;
+    padding-bottom: 0.08rem !important;
+    padding-left: 0.55rem !important;
+    padding-right: 0.55rem !important;
+    line-height: 1.15 !important;
+}
+
+.highlight > pre code,
+.highlight > pre[tabindex="0"] code {
+    line-height: 1.15 !important;
+}
+
+.highlight > pre code > span,
+.highlight > pre[tabindex="0"] code > span {
+    display: block !important;
+    line-height: 1.15 !important;
+}
+
+.highlight > pre code > span > span,
+.highlight > pre[tabindex="0"] code > span > span {
+    display: inline !important;
+    line-height: 1.15 !important;
 }
